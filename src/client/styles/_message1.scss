@@ -1,0 +1,17 @@
+.message1 {
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+
+    &-header {
+        position: absolute;
+        font-size: 3rem;
+        top: 4rem;
+    }
+
+    &-location {
+        position: absolute;
+        top: 11rem;
+        right: -14rem;
+    }
+}

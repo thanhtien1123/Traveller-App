@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    
+    .city-text {
+        padding: 2rem 5rem;
+        border-radius: 0.5rem;
+    }
+
+    .date {
+        border-radius: 0.5rem;
+        margin: 1rem;
+    }
+
+    .submit-button {
+        margin-left: 1rem;
+        position: absolute;
+        top: 6rem;
+        padding: 10px 20px;
+        border-radius: 0.5rem;
+    }
+}

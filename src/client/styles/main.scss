@@ -1,0 +1,20 @@
+@import 'header';
+@import 'form';
+@import 'intro';
+@import 'footer';
+@import 'result';
+@import 'message1';
+@import 'message2';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d1c956;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
