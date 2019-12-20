@@ -41,18 +41,17 @@ app.get('/forecast', (req, res) => {
                             error: error
                         })
                     } else {
-                        image(location, (error, image) => {
+                        image(req.query.address, (error, image) => {
                             if(error) {
                                 return res.send({
                                     error
                                 })
                             } else {
                                 console.log(image, forecastData, location);
-                                
                                 res.send({
                                     image,
                                     location,        
-                                    forecastData: forecastData,  
+                                    forecastData,  
                                 })
                             }
                         })
