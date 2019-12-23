@@ -2,8 +2,9 @@
 @import 'form';
 @import 'intro';
 @import 'footer';
-// @import 'message1';
-// @import 'message2';
+@import 'message1';
+@import 'message2';
+@import 'image';
 
 * {
     margin: 0;
@@ -15,4 +16,11 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: url('https://openweathermap.org/themes/openweathermap/assets/img/new-history-forecast-bulk.png');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
+

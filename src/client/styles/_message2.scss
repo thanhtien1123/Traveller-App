@@ -1,13 +1,12 @@
 .message2 {
-    font-size: 2rem;
-    display: inline-block;
+    font-size: 1.3rem;
     position: relative;
+    width: 80%;
+    margin: auto;
 
-    &-header {
+    &-forecast-data {
         position: absolute;
-        font-size: 3rem;
-        top: 4rem;
-        left: 20rem;
+        top: 9rem;
+        
     }
-
 }

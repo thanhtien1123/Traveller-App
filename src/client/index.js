@@ -5,7 +5,7 @@ const form = document.querySelector('.form');
 const location = document.querySelector('.city-text');
 const messageOne = document.querySelector('.message1-location');
 const messageTwo = document.querySelector('.message2-forecast-data');
-const image = document.querySelector('.image');
+const image = document.querySelector('.message3-image');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -16,8 +16,8 @@ form.addEventListener('submit', (e) => {
             if(res.error) {
                 messageOne.textContent = res.error;
             } else {
-                messageOne.textContent = res.location;
-                messageTwo.textContent = res.forecastData;
+                messageOne.textContent = `Awesome, you are travelling to ${res.location}`;
+                messageTwo.textContent = `The weather is: ${res.forecastData}`;
                 image.src = res.image;
             }
         })

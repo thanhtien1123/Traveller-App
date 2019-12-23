@@ -1,17 +1,12 @@
 .message1 {
-    font-size: 2rem;
-    display: inline-block;
+    font-size: 1.3rem;
     position: relative;
-
-    &-header {
-        position: absolute;
-        font-size: 3rem;
-        top: 4rem;
-    }
+    width: 80%;
+    margin: auto;
 
     &-location {
         position: absolute;
-        top: 11rem;
-        right: -14rem;
+        top: 3rem;
+        
     }
 }
