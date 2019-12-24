@@ -21,9 +21,9 @@
         </section>
         <section>
             <form class="form">
-                <input type="text" placeholder="Enter city" class="city-text">
+                <input type="text" placeholder="Enter city" class="city-text" required>
                 <br>
-                <input type="date" class="date" >
+                <input type="date" class="date">
                 <input type="submit" value="Submit" class="submit-button">
             </form>
         </section>
@@ -42,5 +42,12 @@
     <footer>
         <h1>Created by Tien Nguyen</h1>
     </footer>
+    <script>
+        if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+            });
+        }
+    </script>   
 </body>
 </html>

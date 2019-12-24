@@ -24,7 +24,7 @@ app.get('/forecast', (req, res) => {
     //If user did not enter address. It will send an error that requires adress
     if(!req.query.address) {
         return res.send({
-            error: 'Address must be provided'
+            error: 'Address and date must be provided'
         })
     } else {
         geocode(req.query.address, (error, {latitude, longtitude, location}) => {
@@ -33,9 +33,7 @@ app.get('/forecast', (req, res) => {
                     error: error
                 })
             } else {
-                console.log(longtitude, latitude);
-                
-                forecast(latitude, longtitude, (error, forecastData) => {
+                forecast(latitude, longtitude, req.query.date, (error, forecastData) => {
                     if(error) {
                         return res.send({
                             error: error
@@ -46,12 +44,13 @@ app.get('/forecast', (req, res) => {
                                 return res.send({
                                     error
                                 })
-                            } else {
-                                console.log(image, forecastData, location);
+                            } else {   
+                                const date = req.query.date;
                                 res.send({
                                     image,
                                     location,        
-                                    forecastData,  
+                                    forecastData,
+                                    date
                                 })
                             }
                         })
@@ -67,6 +66,6 @@ app.get('*', (req, res) => {
     res.send('Error')
 })
 
-app.listen(8081, () => {
-    console.log('Server is up on port 8081')
+app.listen(3000, () => {
+    console.log('Server is up on port 3000')
 })
