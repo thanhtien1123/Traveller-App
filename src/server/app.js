@@ -2,10 +2,8 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const image = require('./utils/image')
 const express = require('express');
-const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
 const app = express();
 
 //setup static directory to serve

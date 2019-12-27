@@ -1,5 +1,0 @@
-// const handleEvent = () => {
-    
-// }
-
-// export {handleEvent}

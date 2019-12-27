@@ -8,8 +8,12 @@ const image = (location, callback) => {
         } else if(body.error) {
             callback("Location unknown", undefined)
         } else {
-            callback(error, body.hits[0].previewURL)    
-        }
+            if((body.hits.length === 0)) {
+                callback(error, '')
+            } else {
+                callback(error, body.hits[0].previewURL)   
+            }
+        } 
     })
 }
 
